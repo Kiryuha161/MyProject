@@ -4,6 +4,7 @@ using UnityEditor.Build;
 using UnityEngine;
 //using UnityEngine.UIElements;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class UI : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class UI : MonoBehaviour
         isButtonEnabled ^= true;
         scroll.SetActive(isButtonEnabled);
 
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
     }
 
 }
