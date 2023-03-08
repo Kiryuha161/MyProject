@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class UI : MonoBehaviour
 {
     [SerializeField] GameObject scroll;
+    [SerializeField] Button button;
     bool isButtonEnabled;
 
     private void Start()
@@ -16,13 +17,14 @@ public class UI : MonoBehaviour
         isButtonEnabled = false;
         gameObject.GetComponent<Button>().onClick.AddListener(TurnOnAndOff);
         scroll.SetActive(isButtonEnabled);
+
     }
 
     void TurnOnAndOff()
     {
         isButtonEnabled ^= true;
         scroll.SetActive(isButtonEnabled);
-
+        
     }
 
     public void StartGame()
