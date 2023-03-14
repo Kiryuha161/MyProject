@@ -17,7 +17,7 @@ public class Academia : MonoBehaviour
     {
         _descriptionText.text = _description;
     }
-
+        
     // Update is called once per frame
     void Update()
     {
@@ -30,3 +30,4 @@ public class Academia : MonoBehaviour
         _panel.SetActive(_isActivePanel);
     }
 }
+
